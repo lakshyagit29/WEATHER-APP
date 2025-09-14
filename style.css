@@ -1,0 +1,37 @@
+*{ margin:0; padding:0; box-sizing:border-box; font-family: 'Poppins', sans-serif; }
+body{ display:flex; justify-content:center; align-items:center; min-height:100vh; background:#222; }
+
+.card{
+  width:90%; max-width:470px;
+  background:linear-gradient(135deg,#00feba,#5b548a);
+  border-radius:20px; padding:30px; color:#fff; text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.search{ display:flex; gap:10px; align-items:center; }
+.search input{ flex:1; height:50px; border-radius:50px; padding:10px 20px; font-size:18px; border:none; outline:none; }
+.search button{ width:60px; height:60px; border-radius:50%; border:none; background:#ebfffc; cursor:pointer; display:flex; align-items:center; justify-content:center; }
+.search button img{ width:20px; }
+
+.error{ color: yellow; margin:10px 0; display:block; }
+
+.weather-icon{ width:170px; margin:20px 0; }
+.weather .temp{ font-size:72px; margin:0; }
+.weather .city{ font-size:26px; margin-top:-6px; }
+
+.details{ display:flex; justify-content:space-between; margin-top:20px; gap:10px; padding:0 10px; }
+.col{ display:flex; flex-direction:column; align-items:center; }
+.col img{ width:42px; margin-bottom:8px; }
+.humidity, .wind{ font-size:20px; font-weight:600; }
+
+/* Chatbox */
+.chatbox{ margin-top:18px; background:rgba(255,255,255,0.12); padding:8px; border-radius:10px; }
+.chat-messages{ max-height:120px; overflow:auto; font-size:14px; text-align:left; padding:6px; }
+.chat-messages p{ margin:6px 0; }
+#chatInput{ width:70%; padding:6px; border-radius:6px; border:none; }
+#sendBtn{ width:24%; padding:6px; border-radius:6px; border:none; margin-left:4px; cursor:pointer; }
+
+/* Popup */
+.popup{ display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); justify-content:center; align-items:center; z-index:999; }
+.popup-content{ background:#fff; color:#222; padding:18px; border-radius:12px; width:90%; max-width:320px; text-align:center; box-shadow:0 8px 30px rgba(0,0,0,0.2); }
+.popup-content button{ margin-top:12px; background:#00feba; color:#fff; padding:8px 16px; border:none; border-radius:8px; cursor:pointer; }

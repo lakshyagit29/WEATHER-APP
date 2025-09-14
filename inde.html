@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <div class="search">
+      <input type="text" id="cityInput" placeholder="Enter city name" spellcheck="false">
+      <button id="searchBtn"><img src="search.png" alt="Search"></button>
+    </div>
+
+    <p class="error" id="errorMsg" style="display:none;">Invalid city name. Please try again.</p>
+
+    <div class="weather">
+      <img src="weather.png" id="weatherIcon" class="weather-icon" alt="icon">
+      <h1 class="temp" id="temp">--°C</h1>
+      <h2 class="city" id="cityName">--</h2>
+    </div>
+
+    <div class="details">
+      <div class="col">
+        <img src="humidity.png" alt="humidity icon">
+        <p class="humidity" id="humidity">--%</p>
+        <p>Humidity</p>
+      </div>
+      <div class="col">
+        <img src="wind.png" alt="wind icon">
+        <p class="wind" id="wind">-- km/h</p>
+        <p>Wind</p>
+      </div>
+    </div>
+
+    <div class="chatbox">
+      <div class="chat-messages" id="chatMessages"></div>
+      <input type="text" id="chatInput" placeholder="Ask about the weather...">
+      <button id="sendBtn">Send</button>
+    </div>
+  </div>
+
+  <!-- Weather Alert Popup (outside .card so it covers page) -->
+  <div id="weatherAlert" class="popup" aria-hidden="true">
+    <div class="popup-content">
+      <h3 id="alertTitle">Weather Alert</h3>
+      <p id="alertMessage"></p>
+      <button id="alertOk">OK</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
